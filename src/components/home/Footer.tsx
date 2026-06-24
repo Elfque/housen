@@ -114,7 +114,12 @@ export default function Footer() {
 
           <p>Designed with ❤️ for better living.</p>
 
-          <button className="hover:text-white">Back to top ↑</button>
+          <button
+            className="hover:text-white"
+            onClick={() => window.scrollTo(0, 0)}
+          >
+            Back to top ↑
+          </button>
         </div>
       </div>
     </footer>
