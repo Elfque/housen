@@ -1,5 +1,5 @@
-import Navbar from "../home/Navbar";
-import Footer from "../home/Footer";
+import Navbar from "../Navbar";
+import Footer from "../Footer";
 
 import InsightsHero from "./InsightHero";
 // import FeaturedInsight from "./FeaturedInsight";

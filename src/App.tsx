@@ -4,6 +4,8 @@ import ArticlesPage from "./components/articles/ArticlesPage";
 import Article from "./components/article/Article";
 import Insights from "./components/insights/Insights";
 import InsightDetailsPage from "./components/insights/InsightDetail";
+import About from "./components/about/About";
+import ContactUs from "./components/contact/ContactUs";
 
 function App() {
   return (
@@ -16,6 +18,9 @@ function App() {
         <Route path="/insights" element={<Insights />} />
 
         <Route path="/insights/:slug" element={<InsightDetailsPage />} />
+        <Route path="/about" element={<About />} />
+
+        <Route path="/contact" element={<ContactUs />} />
       </Routes>
     </BrowserRouter>
   );

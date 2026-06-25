@@ -1,5 +1,5 @@
-import Footer from "../home/Footer";
-import Navbar from "../home/Navbar";
+import Footer from "../Footer";
+import Navbar from "../Navbar";
 import BlogHero from "./BlogHero";
 import Blogs from "./Blogs";
 import Categories from "./Categories";

@@ -1,8 +1,8 @@
 import { useParams } from "react-router-dom";
 
 import { insights } from "../../data/insights";
-import Footer from "../home/Footer";
-import Navbar from "../home/Navbar";
+import Footer from "../Footer";
+import Navbar from "../Navbar";
 
 import ArticleHero from "./ArticleHero";
 import AuthorCard from "./AuthorCard";

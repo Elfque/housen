@@ -2,12 +2,26 @@ import { ArrowRight } from "lucide-react";
 import { useLocation } from "react-router-dom";
 
 const navLinks = [
-  "Home",
-  "Properties",
-  "About",
-  "Services",
-  "Insights",
-  "Contact",
+  {
+    text: "Home",
+    link: "/",
+  },
+  {
+    text: "Properties",
+    link: "/properties",
+  },
+  {
+    text: "About",
+    link: "/about",
+  },
+  {
+    text: "Insights",
+    link: "/insights",
+  },
+  {
+    text: "Contact",
+    link: "/contact",
+  },
 ];
 
 export default function Navbar() {
@@ -28,13 +42,13 @@ export default function Navbar() {
 
         {/* Nav */}
         <nav className="hidden items-center gap-10 lg:flex">
-          {navLinks.map((link) => (
+          {navLinks.map(({ link, text }) => (
             <a
               key={link}
-              href="#"
+              href={link}
               className="text-sm text-white/80 transition hover:text-white"
             >
-              {link}
+              {text}
             </a>
           ))}
         </nav>
