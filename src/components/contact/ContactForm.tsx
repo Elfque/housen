@@ -1,51 +1,61 @@
+import { ArrowRight } from "lucide-react";
+
 export default function ContactForm() {
   return (
-    <div className="rounded-[40px] bg-[#F8F6F3] p-10">
-      <h2 className="mb-10 text-4xl font-serif">Send Us A Message</h2>
+    <div className="rounded-4xl bg-white p-10 shadow-sm">
+      <h2 className="font-serif text-5xl">
+        Let's Talk About
+        <br />
+        Your Project
+      </h2>
 
-      <form className="space-y-6">
+      <form className="mt-10 space-y-6">
+        <Input label="Full Name" placeholder="Your full name" />
+
+        <Input label="Email Address" placeholder="We'll get back to you here" />
+
         <div className="grid gap-6 md:grid-cols-2">
-          <input
-            placeholder="First Name"
-            className="rounded-2xl border bg-white px-5 py-4"
-          />
+          <Input label="Company Name" placeholder="Who do you represent?" />
 
-          <input
-            placeholder="Last Name"
-            className="rounded-2xl border bg-white px-5 py-4"
+          <Input label="Subject" placeholder="What's this about?" />
+        </div>
+
+        <div>
+          <label className="mb-3 block text-sm font-medium">Message</label>
+
+          <textarea
+            rows={6}
+            placeholder="Tell us how we can help"
+            className="w-full rounded-2xl border border-[#E8E2DA] px-5 py-4 outline-none"
           />
         </div>
 
-        <input
-          placeholder="Email Address"
-          className="w-full rounded-2xl border bg-white px-5 py-4"
-        />
-
-        <input
-          placeholder="Subject"
-          className="w-full rounded-2xl border bg-white px-5 py-4"
-        />
-
-        <textarea
-          rows={6}
-          placeholder="Tell us about your project..."
-          className="w-full rounded-2xl border bg-white px-5 py-4"
-        />
-
-        <button
-          type="submit"
-          className="
-            rounded-full
-            bg-accent
-            px-8
-            py-4
-            text-black
-            font-medium
-          "
-        >
+        <button className="flex w-full items-center justify-center gap-3 rounded-2xl bg-accent py-5 font-medium text-white">
           Send Message
+          <ArrowRight size={18} />
         </button>
       </form>
+    </div>
+  );
+}
+
+function Input({ label, placeholder }: { label: string; placeholder: string }) {
+  return (
+    <div>
+      <label className="mb-3 block text-sm font-medium">{label}</label>
+
+      <input
+        placeholder={placeholder}
+        className="
+          w-full
+          rounded-2xl
+          border
+          border-[#E8E2DA]
+          px-5
+          py-4
+          outline-none
+        "
+      />
     </div>
   );
 }
